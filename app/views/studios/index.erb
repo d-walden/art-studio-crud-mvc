@@ -1,0 +1,8 @@
+<h2>Newly Reviewed Studios</h2>
+
+<ul class="studio-list">
+  <% @studios.each do |studio| %>
+    <li><a href="restaurants/<%= studio.id %>"><span class="studio-name"><%= studio.name %></span> </a> - <span class="studio-created-by"><%= studio.user.email %></span>
+    </li>
+  <%end%>
+</ul>
