@@ -20,16 +20,21 @@
   <title></title>
 </head>
 <body>
-<div id="content">
-  <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
+ <nav id="layout-nav">
+    <ul>
+      <li><a href='/'>Home</a></li>
+
+      <% if logged_in? %>
+        <li><a href='/users/<%= current_user.id %>'> current_user.username </a></li>
+        <li><a class="create-studio" href='/studios/new'>Add a Studio</a></li>
+        <li><a href='/logout'>Log Out</a></li>
       <% else %>
-        <a href="/login">Login</a>
+        <li><a href='/login'>Log In</a></li>
+        <li><a href='/users/new'>Sign Up</a></li>
       <% end %>
-  </header>
+    </ul>
+  </nav>
+
   <%= yield %>
 </div>
 </body>
