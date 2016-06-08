@@ -1,4 +1,8 @@
 get '/' do
+  redirect '/studios'
+end
+
+get '/studios' do  
   @studios = Studio.all
   erb :'studios/index'
 end

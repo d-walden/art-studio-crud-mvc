@@ -25,7 +25,7 @@
       <li><a href='/'>Home</a></li>
 
       <% if logged_in? %>
-        <li><a href='/users/<%= current_user.id %>'> current_user.username </a></li>
+        <li><a href='/users/<%= current_user.id %>'> <%= current_user.username %> </a></li>
         <li><a class="create-studio" href='/studios/new'>Add a Studio</a></li>
         <li><a href='/logout'>Log Out</a></li>
       <% else %>

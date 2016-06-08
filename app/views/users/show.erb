@@ -1,0 +1,13 @@
+<p>Hello, <%= @user.email %>!</p>
+
+<ul>
+  <% @user.studios.each do |studio| %>
+  <li><%= studio.name %></li>
+  <% end %>
+</ul>
+
+<ul>
+  <% @user.reviews.each do |review| %>
+  <li><%= review.body %></li>
+  <% end %>
+</ul>
